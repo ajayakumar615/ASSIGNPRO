@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allotted Classes for Teacher 9</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 30px;
+      background-color: #1e00ff;
+      color: #fff;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f9f9f9;
+      font-weight: bold;
+      color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .logout-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: #00ff2f;
+      cursor: pointer;
+    }
+
+    .logout-icon:hover {
+      color: #f30b0b;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #7100f3;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0adb0e;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        width: 100%;
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script>
+    function saveTableAsPDF() {
+      const element = document.querySelector("table");
+      const options = {
+        margin: 10,
+        filename: 'teacher_schedule.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(options).from(element).save();
+    }
+
+    function logout() {
+      window.location.href = "index2.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var logoutButton = document.querySelector(".logout-button");
+      if (logoutButton) {
+        logoutButton.addEventListener("click", logout);
+      }
+    });
+  </script>
+</head>
+<body>
+  <i class="fas fa-sign-out-alt logout-icon" onclick="logout()"></i>
+  <Center>
+    <header>
+      <h1>Allotted Classes for Faculty</h1>
+      <h3>From : 08/06/2023 - 15/06/2023</h3>
+    </header>
+  <table border="2px" style="width: 50%;">
+    <tr style="height:80px">
+      <th>Date</th>
+      <th>Time</th>
+      <th>Block</th>
+      <th>Room.No</th>
+    </tr>
+    <tr style="height:50px">
+      <td>08/06/2023</td>
+      <td>09:30 AM</td>
+      <td>MAIN BLOCK</td>
+      <td>203-MB</td>
+    </tr>
+    <tr style="height:50px">
+      <td>09/06/2023</td>
+      <td>09:30 AM</td>
+      <td>EEE BLOCK</td>
+      <td>203-EB</td>
+    </tr>
+    <tr style="height:50px">
+      <td>12/06/2023</td>
+      <td>09:30 AM</td>
+      <td>MAIN BLOCK</td>
+      <td>203-MB</td>
+    </tr>
+    <tr style="height:50px">
+      <td>13/06/2023</td>
+      <td>09:30 AM</td>
+      <td>EEE BLOCK</td>
+      <td>203-EB</td>
+    </tr>
+    <tr style="height:50px">
+      <td>14/06/2023</td>
+      <td>09:30 AM</td>
+      <td>EEE BLOCK</td>
+      <td>202-EB</td>
+    </tr>
+    <tr style="height:50px">
+      <td>15/06/2023</td>
+      <td>09:30 AM</td>
+      <td>EEE BLOCK</td>
+      <td>201-EB</td>
+    </tr>
+  </table>
+  </Center>
+  <div class="button-container">
+    <button onclick="saveTableAsPDF()">Save as PDF</button>
+  </div>
+</body>
+</html>

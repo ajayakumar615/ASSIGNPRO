@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exam Seating Arrangement</title>
+    <link rel = "icon" href = "logo.png" type = "image/x-icon">
+    <link rel="stylesheet" href="index2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+   <header class="header">
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+          <a href="index.html">Admin Log-In</a>
+          <a href="index2.html">Faculty Log-In</a>
+          <a href="contact.html">Contact Us</a>
+    </nav>
+    <form action="" class="search-bar">
+       <input type="text" placeholder="Search...">
+       <button><i class='bx bx-search'></i></button>
+    </form>
+   </header>
+    
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class='bx bxs-user'></i> Faculty Log-In</h2>
+            <div class="text-item">
+                <h2>Welcome ! <br><span>
+                    To <b>ASSIGNPRO</b>
+                </span></h2>
+                <p>Automatic Exam Seating Arrangement System</p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="login-section">
+            <div class="form-box login">
+                <form action="">
+                    <h2> Faculty Log In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" id="username" name="username" required>
+                        <label >Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="password" name="password"  required>
+                        <label>Password</label>
+                    </div>
+                    <button class="btn" type="button" onclick="authenticate1()">Log In</button>
+                </form>
+                <script>
+                function authenticate1() {
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    if (username === "teacher1" && password === "t1@123") {
+                      location.href = "t1.html";
+                    } 
+                    else if (username === "teacher2" && password === "t2@123") {
+                      location.href = "t2.html";
+                    } 
+                    else if (username === "teacher3" && password === "t3@123") {
+                      location.href = "t3.html";
+                    }
+                    else if (username === "teacher4" && password === "t4@123") {
+                      location.href = "t4.html";
+                    }
+                    else if (username === "teacher5" && password === "t5@123") {
+                      location.href = "t5.html";
+                    }
+                    else if (username === "teacher6" && password === "t6@123") {
+                      location.href = "t6.html";
+                    }
+                    else if (username === "teacher7" && password === "t7@123") {
+                      location.href = "t7.html";
+                    }
+                    else if (username === "teacher8" && password === "t8@123") {
+                      location.href = "t8.html";
+                    }
+                    else if (username === "teacher9" && password === "t9@123") {
+                      location.href = "t9.html";
+                    }
+                    else if (username === "teacher10" && password === "t10@123") {
+                      location.href = "t10.html";
+                    }
+                    else if (username === "teacher11" && password === "t11@123") {
+                      location.href = "t11.html";
+                    }
+                    else if (username === "teacher12" && password === "t12@123") {
+                      location.href = "t12.html";
+                    }
+                    else {
+                      alert("Invalid username or password");
+                    }
+                  }
+                  </script>
+            </div>
+        </div>
+    </div>
+     
+    
+
+    <script src="index.js"></script>
+</body>
+
+</html>
